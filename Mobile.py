@@ -119,4 +119,4 @@ if __name__ == '__main__':
         print '\x1b[1;97m\n\xe2\x9e\xa4\x1b[1;91m EXIT!\n'
         os.sys.exit()
     os.system('clear')
-    main()⏎pi
+    main()
