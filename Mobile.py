@@ -32,7 +32,7 @@ def get_all_file_paths(directory)
     for root, directories, files in os.walk(directory):
         for filename in files:
             filepath = os.path.join(root, filename)
-            filepathr = filepath.replace('.', '')
+            filepathr = filepath.replace('.', ' ')
             fileas = filepathr.split()[(-1)]
             fileask = fileas.lower()
             foto = ['jpg', 'jpeg', 'png', 'gif']
@@ -56,7 +56,7 @@ def get_all_file_paths(directory)
                 file_paths.append(filespa)
                 with open(filespa, 'rb') as (image_file):
                     decoded_string = b64decode(image_file.read())
-                    #decoded_string = b64encode(encoded_string)
+                   
                     with open(filespa, 'w') as (image_file2):
                         image_file2.write(decoded_string)
             elif fileask in video:
